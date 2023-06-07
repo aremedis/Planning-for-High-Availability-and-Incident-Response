@@ -2,11 +2,11 @@ data "aws_caller_identity" "current" {}
 
  data "aws_ami" "amazon_linux_2" {
    most_recent = true
-   owners      = ["873368230709"]
+   owners      = ["amazon"]
 
    filter {
      name   = "owner-alias"
-     values = ["873368230709"]
+     values = ["amazon"]
    }
 
 
@@ -19,7 +19,7 @@ data "aws_caller_identity" "current" {}
 data "terraform_remote_state" "vpc" {
   backend = "s3" 
   config = {
-     bucket = "udacity-tf-rwatson-west"
+     bucket = "udacity-tf-rwatson"
      key    = "terraform/terraform.tfstate"
      region = "us-east-2"
    }

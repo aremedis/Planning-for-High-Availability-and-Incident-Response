@@ -1,0 +1,31 @@
+{
+    "apiVersion": "v1",
+    "data": {
+        "prometheus.yaml.gz": "H4sIAAAAAAAA/6xTy47bMAy8+yt46KEt4DhOW2BXtwLtsY8/EGiZcdSVJYGis+7fF1KcxtkEix56syhqZjgeDi506FQFQEd0E4oNXlsvxEd0Cj5sUwWQDGOkmzLNQuzRaYcduZRBACKHkeRAU1IwBm8lsPVDcynXT1NH9ep8+XwBoJmiswYVvHn788cX/f3zt6/vKp4c6b11lFRVQ0NiVuBNvk3NXfRXiOv8rGDW2+b95jeOrlqGNsHv7VC4foVOexxJAZldBTCSsDVJR5SDgmY5Zr8ExZrLU4AaBHkgWUyqoX3YtO3jpt3tNruPD+qx3W7v3zxsr5g7h+apC/MtfeTQUQUQkXFceMbQT47OnAeRqHfz/G8Kc7dqmms5FQBT+d3Xb1OY2NBVEGrQGvueKSWtS+VEcGpSoHVRqk/V11Be9L0Esj4JekOrIS4c1wpyoNDQSF7UKmj12dWa5hhYiDeX6KrHtv1UJQmMQ7FSUt+dxIVJdNjrwD2xFjuSfra+D88KtqlCRyz5fQVQvvVd59DklVNQrnoOcRE60Kzu7MIZbESPA/ECkiOgI9PezgqagpDMgXJg8m8shZx+9iSUdOrXGjIAB5dj7fsYrJfTIgLkyKWIhpa+v7XLsV4teSlitPpInMpQx90yzc3g69GfiOICeCcBpwyMJKjXIxAfraGyFUvbjWc3C7927j9oONulc2buKHmmrvoTAAD//1mtWj9gBQAA"
+    },
+    "kind": "Secret",
+    "metadata": {
+        "annotations": {
+            "generated": "true"
+        },
+        "creationTimestamp": "2023-05-17T14:32:16Z",
+        "labels": {
+            "managed-by": "prometheus-operator"
+        },
+        "name": "prometheus-prometheus-kube-prometheus-prometheus",
+        "namespace": "monitoring",
+        "ownerReferences": [
+            {
+                "apiVersion": "monitoring.coreos.com/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "Prometheus",
+                "name": "prometheus-kube-prometheus-prometheus",
+                "uid": "e96631b3-b906-49da-b11b-5d731fddf105"
+            }
+        ],
+        "resourceVersion": "9526",
+        "uid": "e62cd616-d12c-43d8-8ee4-ce47a65cf860"
+    },
+    "type": "Opaque"
+}
