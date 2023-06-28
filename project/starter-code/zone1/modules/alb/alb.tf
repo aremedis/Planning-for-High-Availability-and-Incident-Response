@@ -3,13 +3,24 @@ resource "aws_lb_target_group" "udacity" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = var.vpc_id
+
+  health_check {
+    path                  = "/metrics"
+    port                  = 80
+    protocol              = "HTTP"
+    healthy_threshold     = 3
+    unhealthy_threshold   = 3
+    matcher               = "200"
+  }
 }
 
 resource "aws_lb_target_group_attachment" "udacity" {
-  count            = 2
+  count            = 3
   target_group_arn = aws_lb_target_group.udacity.arn
   target_id        = var.ec2.*.id[count.index]
   port             = 80
+
+
 }
 
 resource "aws_lb" "udacity" {
